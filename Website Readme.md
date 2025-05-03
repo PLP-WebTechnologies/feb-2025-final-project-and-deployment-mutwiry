@@ -24,7 +24,7 @@ A simple, responsive blog website built purely with HTML, CSS, and vanilla JavaS
 └── README.md # Project documentation
 ## Live Site Demo
 
-🔗 **[View the Blog](https://your-username.github.io/blog-website/)**
+🔗 **[View the Blog](https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-mutwiry/)**
 
 *(Remember to replace `your-username` with your actual GitHub username after deployment!)*
 
@@ -59,4 +59,4 @@ A simple, responsive blog website built purely with HTML, CSS, and vanilla JavaS
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file (if included) or go to https://opensource.org/licenses/MIT for details.
+This project is licensed under the MIT License - go to https://opensource.org/licenses/MIT for details.
