@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Awesome Blog - Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+       <a href="index.html" class="logo">My Awesome Blog</a>
+       <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+       <nav>
+         <a href="index.html">Home</a>
+         <a href="blog.html" class="active">Blog</a>
+         <a href="about.html">About</a>
+         <a href="contact.html">Contact</a>
+       </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Blog Posts</h1>
+
+    <article class="blog-post" id="post1">
+      <h2>Getting Started with Web Dev</h2>
+      <p class="post-meta">Published on October 26, 2025 by Admin</p>
+      <p>This post introduces the fundamental building blocks of the web: HTML for structure, CSS for styling, and JavaScript for interactivity. We cover the basics needed to create your first simple webpage.</p>
+      <p>HTML (HyperText Markup Language) defines the content and structure. CSS (Cascading Style Sheets) controls the presentation and layout. JavaScript adds dynamic behavior and interactivity.</p>
+      <p>Stay tuned for more in-depth tutorials!</p>
+    </article>
+
+    <hr>
+
+    <article class="blog-post" id="post2">
+      <h2>CSS Grid vs. Flexbox</h2>
+      <p class="post-meta">Published on October 24, 2025 by Admin</p>
+      <p>Choosing the right layout tool in CSS can be tricky. We compare CSS Grid and Flexbox, highlighting their strengths and use cases.</p>
+      <p>Flexbox is primarily designed for one-dimensional layouts (either a row or a column). It excels at distributing space along a single axis.</p>
+      <p>CSS Grid, on the other hand, is designed for two-dimensional layouts (rows and columns simultaneously). It's perfect for complex page structures.</p>
+      <p>Often, the best approach is to use them together!</p>
+    </article>
+
+     <hr>
+
+     <article class="blog-post" id="post3">
+      <h2>Understanding JavaScript Closures</h2>
+      <p class="post-meta">Published on October 20, 2025 by Admin</p>
+      <p>Closures are a fundamental concept in JavaScript. A closure gives you access to an outer function's scope from an inner function. This is powerful for creating private variables and maintaining state.</p>
+      <pre><code>function outerFunction() {
+  let outerVariable = 'I am outside!';
+  function innerFunction() {
+    console.log(outerVariable); // Accesses outerVariable
+  }
+  return innerFunction;
+}
+const myClosure = outerFunction();
+myClosure(); // Logs: 'I am outside!'</code></pre>
+    </article>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 My Awesome Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
