@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Awesome Blog - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">My Awesome Blog</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to My Awesome Blog!</h1>
+      <p>Sharing thoughts on web development, tech, and life.</p>
+    </section>
+
+    <section>
+      <h2>Latest Posts</h2>
+      <article class="post-preview">
+        <h3><a href="blog.html#post1">Getting Started with Web Dev</a></h3>
+        <p class="post-meta">Published on October 26, 2025</p>
+        <p>This post introduces the fundamental building blocks of the web: HTML for structure, CSS for styling, and JavaScript for interactivity...</p>
+        <a href="blog.html#post1" class="read-more">Read More →</a>
+      </article>
+      <article class="post-preview">
+        <h3><a href="blog.html#post2">CSS Grid vs. Flexbox</a></h3>
+        <p class="post-meta">Published on October 24, 2025</p>
+        <p>Choosing the right layout tool in CSS can be tricky. We compare CSS Grid and Flexbox, highlighting their strengths and use cases...</p>
+        <a href="blog.html#post2" class="read-more">Read More →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 My Awesome Blog. All rights reserved.</p>
+      Add Dark Mode Toggle -->
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
