@@ -1,0 +1,358 @@
+/* --- General Styles --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f8f9fa; /* Light background */
+  color: #343a40; /* Dark text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Add horizontal padding */
+}
+
+main {
+  flex-grow: 1; /* Ensures main content pushes footer down */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  color: #212529; /* Slightly darker headings */
+  margin-bottom: 0.5em;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #dee2e6; /* Light gray separator */
+  margin: 2rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+pre {
+    background-color: #e9ecef;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto; /* Handle long code lines */
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+/* --- Header & Navigation --- */
+header {
+  background: #3d93a7; /* Teal background */
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+header .logo:hover {
+    text-decoration: none;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.5rem; /* Spacing between nav items */
+  text-decoration: none;
+  font-size: 1rem;
+  padding-bottom: 5px; /* Space for border */
+  border-bottom: 2px solid transparent; /* Prepare for active state */
+  transition: border-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom-color: #ffffff; /* White underline on hover/active */
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* --- Homepage Specific --- */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #e9ecef; /* Light gray background for hero */
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.post-preview {
+  background-color: #ffffff; /* White background for previews */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.post-preview h3 a {
+    color: #343a40; /* Darker link color for titles */
+}
+.post-preview h3 a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #6c757d; /* Gray for meta text */
+  margin-bottom: 0.5rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* --- Blog Page Specific --- */
+.blog-post {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+/* --- Contact Form --- */
+#contactForm {
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  max-width: 600px; /* Limit form width */
+  margin: 1rem auto; /* Center form */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #495057;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resize */
+}
+
+#contactForm button[type="submit"] {
+  background-color: #3d93a7;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #31788a; /* Darker teal on hover */
+}
+
+.error-message {
+    color: #dc3545; /* Red for errors */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none; /* Hidden by default */
+}
+input.invalid, textarea.invalid {
+    border-color: #dc3545;
+}
+input.invalid:focus, textarea.invalid:focus {
+     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+#formStatus {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+#formStatus.success {
+    color: #28a745; /* Green for success */
+}
+#formStatus.error {
+    color: #dc3545; /* Red for error */
+}
+
+
+/* --- Footer --- */
+footer {
+  background: #343a40; /* Dark footer */
+  color: #adb5bd; /* Light gray text */
+  padding: 1.5rem 0;
+  margin-top: auto; /* Pushes footer to bottom */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .header-content nav {
+    display: none; /* Hide nav links */
+    position: absolute;
+    top: 65px; /* Position below header */
+    left: 0;
+    right: 0;
+    background-color: #3d93a7; /* Same as header */
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+    padding-bottom: 1rem; /* Padding at the bottom */
+    z-index: 1000;
+  }
+
+  .header-content nav.active {
+    display: flex; /* Show nav when active */
+  }
+
+  nav a {
+    margin: 0; /* Remove horizontal margin */
+    padding: 0.8rem 1rem; /* Add padding for touch targets */
+    text-align: center;
+    border-bottom: 1px solid #4caebd; /* Separator lines */
+  }
+  nav a:last-child {
+      border-bottom: none;
+  }
+
+  nav a:hover, nav a.active {
+      background-color: #31788a; /* Darker background on hover/active */
+      border-bottom-color: #4caebd; /* Keep separator visible */
+  }
+
+
+  .menu-toggle {
+    display: block; /* Show hamburger menu */
+  }
+
+  #contactForm {
+      padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Example: Further adjustments if needed for very small screens */
+  h1 {
+    font-size: 1.8rem;
+  }
+  .hero {
+      padding: 2rem 1rem;
+  }
+}
+
+/* ---  Dark Mode --- */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode header, body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+body.dark-mode nav a {
+  color: #e0e0e0;
+}
+body.dark-mode nav a:hover, body.dark-mode nav a.active {
+  border-bottom-color: #bb86fc;
+}
+body.dark-mode .post-preview, body.dark-mode .blog-post, body.dark-mode #contactForm {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode .post-preview h3 a {
+    color: #f1f1f1;
+}
+body.dark-mode a {
+    color: #bb86fc;
+}
+body.dark-mode hr {
+    background-color: #444;
+}
+body.dark-mode .form-group label {
+    color: #ccc;
+}
+body.dark-mode .form-group input, body.dark-mode .form-group textarea {
+    background-color: #2c2c2c;
+    border-color: #555;
+    color: #e0e0e0;
+}
+body.dark-mode #contactForm button[type="submit"] {
+    background-color: #bb86fc;
+    color: #121212;
+}
+body.dark-mode #contactForm button[type="submit"]:hover {
+    background-color: #a06bf9;
+}
+body.dark-mode pre {
+    background-color: #2c2c2c;
+}
